@@ -147,31 +147,6 @@ header a:hover {
 	color: #ce3f26;
 }
 
-.nav_link {
-	display: inline-block;
-	width: 6em;
-	background-color: #58b99c;
-	padding: 5px 8px 6px 6px;
-	text-align: center;
-	border-top-right-radius: 1000px;	
-	-moz-border-top-right-radius: 1000px;	
-	-webkit-border-top-right-radius: 1000px;	
-	border-bottom-right-radius: 1000px;	
-	-moz-border-bottom-right-radius: 1000px;	
-	-webkit-border-bottom-right-radius: 1000px;	
-}
-
-.nav_link a {
-	color: #46433A;
-	text-decoration: none;
-}
-.nav_link:hover {
-	background-color: #68c9ac;
-}
-.nav_link:hover a {
-	color: #ce3f26;
-}
-
 .left_arrow_head {
 	width:0px; height:0;
 	line-height:0;
