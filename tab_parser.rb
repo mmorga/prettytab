@@ -114,7 +114,7 @@ class TabParser
     html << <<-HEADER
     <html>
       <head>
-        <title>Girly</title>
+        <title>Tab</title>
         <style type="text/css">
           .comment {
             color: #aaa;

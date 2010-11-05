@@ -1,11 +1,10 @@
 require "sinatra"
-require "haml"
 require "tab_parser"
 
 set :root, File.dirname(__FILE__)
 
 get '/' do
-  haml :index, :format => :html5
+  File.read(File.join('public', 'index.html'))
 end
 
 post '/' do
