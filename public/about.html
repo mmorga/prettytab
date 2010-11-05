@@ -9,8 +9,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Pretty Tab</title>
-  <meta name="description" content="Guitar Tablature Processor">
+  <title>About: Pretty Tab</title>
+  <meta name="description" content="About Guitar Tablature Processor">
   <meta name="author" content="Mark Morga">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,36 +25,36 @@
   <header>
     <h1>PrettyTab</h1>
     <h2>Text Tablature Beautifier</h2>
-    <div class="nav_link"><h3><a href="about.html">About</a></h3></div>
+    <a href="/"><h3>Back</h3></a>
   </header>
   
   <section id="main">
-    <form method="post">
-      <ul>
-        <li>
-          <textarea id="tab_textarea" name="tab" rows="30" cols="90" autofocus required maxlength="20000">
-          </textarea>
-          <div class="callout">
-            <div class="left_arrow_head"></div>
-            <div class="instructions">
-              1. Type or paste some tab here.  <br>
-              <span class="note"><a href="http://www.google.com/search?q=guitar+tablature">Find some tab.</a></span>
-            </div>
-          </div>
-          <div class="example">
-            <p>Try an Example</p>
-          </div>
-        </li>
-        <li>
-          <div class="button_row"><input type="submit" value="Beautify"></div>
-          <div class="callout">
-            <div class="left_arrow_head"></div>
-            <div class="instructions">
-                2. Click "Beautify" and Play.
-            </div>
-          </div>
-        </li>
-    </form>
+    <article>
+      <h2>About PrettyTab</h2>
+      
+      <p>PrettyTab is a little tool to take some of the thousands of available plain text 
+        tablature files and process them into a slightly nicer looking format.</p>
+      
+      <p>You can save the completed tab file to your machine and refer to it later on.  
+        All you need is the single HTML file - there are no attached images or external 
+        javascript required.</p>        
+    </article>
+
+    <article>
+      <h2>PrettyTab Technology</h2>
+      
+      <img class="article-pic" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/200px-Ruby_logo.svg.png" alt="Ruby Programming Language Logo" width="50" height="50"><p>PrettyTab is written in <a href="http://ruby-lang.org/">Ruby</a> using <a href="http://www.sinatrarb.com/">Sinatra</a> as the web stack.  The <a href="http://github.com/mmorga/prettytab">source code</a> is available on <a href="http:/github.com">GitHub</a>.</p>
+      
+      <p>What pretty tab does is parse the text file looking for tablature staffs.  When one is found, it is converted to a canvas tag in the output document and javascript is added which draws the tab into the page.
+    </article>
+    
+    <article>
+      <h2>About Mark Morga</h2>
+      
+      <a href="http://www.flickr.com/photos/markmorga/4461761769/" title="Mark Morga, on Flickr"><img src="http://farm5.static.flickr.com/4048/4461761769_45be6a5af1_m.jpg" width="240" height="180" alt="Mark Morga" /></a>
+      <p>I'm a software developer in San Antonio, TX. You can contact me on <a href="http://github.com/mmorga">my GitHub page</a>.
+      </p> 
+    </article>
   </section>
   
   <footer>
@@ -79,24 +79,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
-  </script>
-  
-  <script type="text/javascript">
-    $(".example").click(function () {
-      $("#tab_textarea").text(
-"Example Tab\n"+
-"\n"+
-"\n"+
-"|---------------------0-3-|---------------------5p3----------0-----------------|\n"+
-"|-----------------0-3-----|--------3-3-3-/5-5-5-----5p3------------------------|\n"+
-"|-------------0-2---------|-1---/4---4-4-/6-6-6---------4\\2-----2b(4)----------|\n"+
-"|---------0-2-------------|-0h2--------------------------------2---------------|\n"+
-"|-----0-2-----------------|-2----------------------------------2---------------|\n"+
-"|-0-3---------------------|-0----------------------------------0---------------|\n\n");
-    });
-    $('.example').hover(function(evt) {
-        $('.example').toggleClass("hi_example");
-      });
   </script>
 </body>
 </html>

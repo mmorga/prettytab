@@ -92,6 +92,10 @@ button {  width: auto; overflow: visible; }
  /* Primary Styles
     Author: Mark Morga
  */
+h2 {
+	color: #ce3f26;
+}
+
 input, textarea {
 	background-color: #FFFFFF;
 }
@@ -109,6 +113,63 @@ header h1 {
 	font-size: 250%;
 	display: inline-block;
 	text-shadow: inset 0px 3px 2px #9d988a;
+}
+
+header h2 {
+	padding-left: 2px;
+	display: inline-block;
+	padding-right: 20em;
+}
+
+header h3 {
+	display: inline-block;
+	width: 6em;
+	background-color: #58b99c;
+	padding: 5px 8px 6px 6px;
+	text-align: center;
+	border-top-right-radius: 1000px;	
+	-moz-border-top-right-radius: 1000px;	
+	-webkit-border-top-right-radius: 1000px;	
+	border-bottom-right-radius: 1000px;	
+	-moz-border-bottom-right-radius: 1000px;	
+	-webkit-border-bottom-right-radius: 1000px;	
+}
+
+header h3:hover {
+	background-color: #68c9ac;
+}
+
+header a {
+	color: #46433A;
+	text-decoration: none;
+}
+header a:hover {
+	color: #ce3f26;
+}
+
+.nav_link {
+	display: inline-block;
+	width: 6em;
+	background-color: #58b99c;
+	padding: 5px 8px 6px 6px;
+	text-align: center;
+	border-top-right-radius: 1000px;	
+	-moz-border-top-right-radius: 1000px;	
+	-webkit-border-top-right-radius: 1000px;	
+	border-bottom-right-radius: 1000px;	
+	-moz-border-bottom-right-radius: 1000px;	
+	-webkit-border-bottom-right-radius: 1000px;	
+}
+
+.nav_link a {
+	color: #46433A;
+	text-decoration: none;
+}
+.nav_link:hover {
+	background-color: #68c9ac;
+}
+.nav_link:hover a {
+	color: #ce3f26;
 }
 
 .left_arrow_head {
@@ -139,7 +200,7 @@ header h1 {
 	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
 	font-weight: bold;
 	text-align: center;
-	width: 350px
+	width: 350px;
 	border-top-right-radius: 1000px;	
 	-moz-border-top-right-radius: 1000px;	
 	-webkit-border-top-right-radius: 1000px;	
@@ -154,13 +215,6 @@ header h1 {
 
 .instructions a {
 	color: #46433A;
-}
-
-.subtitle {
-	color: #ce3f26;
-	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
-	font-weight: bold;
-	padding-left: 2px;
 }
 
 .button_row {
@@ -211,8 +265,40 @@ input[type="submit"] {
 	box-shadow: 5px 5px 5px #46433A;
 }
 
+.hi_example {
+	-moz-box-shadow: 10px 10px 10px #46433A;
+	-webkit-box-shadow: 10px 10px 10px #46433A;
+	box-shadow: 10px 10px 10px #46433A;
+	background-color: #de4f36;
+	left: 890px;
+	top: 260px;
+}
+
 .example p {
 	margin-top: 1.25em;
+}
+
+section {
+	margin-left: 20px;
+}
+
+article {
+	font-size: 150%;
+	width: 30em;
+	margin-bottom: 3em;
+	margin-left: 5em;
+}
+
+article h2 {
+	margin-bottom: 0.75em;
+}
+
+article p {
+	margin-bottom: 0.75em;
+}
+
+img.article-pic {
+	float: right;
 }
 
 @media all and (orientation:portrait) { 
