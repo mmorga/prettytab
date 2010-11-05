@@ -37,13 +37,13 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
+	font-weight: bold;
 }
 body, select, input, textarea {   
 	color: #46433A; 
 	background-color: #f4e9cf;
 	font-family: Cambria, Georgia, Times, “Times New Roman”, serif ;
 }
-h1,h2,h3,h4,h5,h6 { font-weight: bold; }
 html { overflow-y: scroll; }
 
 a:hover, a:active { outline: none; }
@@ -108,26 +108,112 @@ footer {
 header h1 {
 	font-size: 250%;
 	display: inline-block;
-	text-shadow: 0px 1px 1px #6d685a;
+	text-shadow: inset 0px 3px 2px #9d988a;
+}
+
+.left_arrow_head {
+	width:0px; height:0;
+	line-height:0;
+	border-top:50px solid transparent;
+	border-right:100px solid #58b99c; /*#ce3f26;*/
+	border-bottom:50px solid transparent;
+	border-left:10px solid transparent;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.callout {
+	vertical-align: top;
+	display: inline-block;
+	position: absolute;
+	left: 800px;
+}
+
+.instructions {
+	display: inline-block;
+	background-color: #58b99c; /*#ce3f26;*/
+	vertical-align: middle;
+	font-size: 150%;
+	margin-left: -4px;
+	padding: 5px 8px 6px 6px;
+	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
+	font-weight: bold;
+	text-align: center;
+	width: 350px
+	border-top-right-radius: 1000px;	
+	-moz-border-top-right-radius: 1000px;	
+	-webkit-border-top-right-radius: 1000px;	
+	border-bottom-right-radius: 1000px;	
+	-moz-border-bottom-right-radius: 1000px;	
+	-webkit-border-bottom-right-radius: 1000px;	
+}
+
+.note {
+	font-size: 90%;
+}
+
+.instructions a {
+	color: #46433A;
 }
 
 .subtitle {
-	color: #ce5a46;
+	color: #ce3f26;
 	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
 	font-weight: bold;
 	padding-left: 2px;
 }
 
+.button_row {
+	display: inline-block;
+	text-align: right;
+	width: 750px;
+}
+
 form ul li {
 	list-style: none;
+	min-height: 100px;
 }
 
 textarea {
 	border-width: 4px;
 	border-style: ridge;
 	border-color: #58b99c;
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
+input[type="submit"] {
+	font-size: 150%;
+	font-weight: bold;
+	margin-top: 20px;
+	background-color: #58b99c;
+	border-color: #58b99c;
+}
+
+.example {
+	background-color: #ce3f26;
+	font-size: 300%;
+	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
+	font-weight: bold;
+	-webkit-transform: rotate(-15deg); 
+	-moz-transform: rotate(-15deg);
+	display: inline-block;
+	position: absolute;
+	left: 900px;
+	top: 270px;
+	width: 5.5em;
+	height: 5.5em;
+	border-radius: 1000px;	
+	-moz-border-radius: 1000px;	
+	-webkit-border-radius: 1000px;
+	text-align: center;
+	-moz-box-shadow: 5px 5px 5px #46433A;
+	-webkit-box-shadow: 5px 5px 5px #46433A;
+	box-shadow: 5px 5px 5px #46433A;
+}
+
+.example p {
+	margin-top: 1.25em;
+}
 
 @media all and (orientation:portrait) { 
   

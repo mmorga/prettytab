@@ -18,6 +18,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="stylesheet" href="css/style.css?v=2">
+  <script src="js/libs/modernizr-1.6.min.js"></script>
 </head>
 
 <body>
@@ -30,11 +31,27 @@
     <form method="post">
       <ul>
         <li>
-          <textarea name="tab" rows="30" cols="90" autofocus required maxlength="20000">
+          <textarea id="tab_textarea" name="tab" rows="30" cols="90" autofocus required maxlength="20000">
           </textarea>
+          <div class="callout">
+            <div class="left_arrow_head"></div>
+            <div class="instructions">
+              1. Type or paste some tab here.  <br>
+              <span class="note"><a href="http://www.google.com/search?q=guitar+tablature">Find some tab.</a></span>
+            </div>
+          </div>
+          <div class="example">
+            <p>Try an Example</p>
+          </div>
         </li>
         <li>
-          <input type="submit" value="Beautify">
+          <div class="button_row"><input type="submit" value="Beautify"></div>
+          <div class="callout">
+            <div class="left_arrow_head"></div>
+            <div class="instructions">
+                2. Click "Beautify" and Play.
+            </div>
+          </div>
         </li>
     </form>
   </section>
@@ -46,6 +63,8 @@
     </div>  
     <a href="http://github.com/mmorga/prettytab">Get the source</a> on <a href="http://github.com">GitHub</a>.
   </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
 
   <script type="text/javascript">
 
@@ -59,6 +78,21 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
+  </script>
+  
+  <script type="text/javascript">
+    $(".example").click(function () {
+      $("#tab_textarea").text(
+"Example Tab\n"+
+"\n"+
+"\n"+
+"|---------------------0-3-|---------------------5p3----------0-----------------|\n"+
+"|-----------------0-3-----|--------3-3-3-/5-5-5-----5p3------------------------|\n"+
+"|-------------0-2---------|-1---/4---4-4-/6-6-6---------4\\2-----2b(4)----------|\n"+
+"|---------0-2-------------|-0h2--------------------------------2---------------|\n"+
+"|-----0-2-----------------|-2----------------------------------2---------------|\n"+
+"|-0-3---------------------|-0----------------------------------0---------------|\n\n");
+    });
   </script>
 </body>
 </html>
