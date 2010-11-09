@@ -17,7 +17,8 @@ menu, nav, section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
     display:block;
 }
-nav ul { list-style:none; }
+nav {display: inline-block;}
+nav ul { list-style:none}
 blockquote, q { quotes:none; }
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
@@ -38,6 +39,7 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 h1, h2, h3, h4, h5, h6 {
 	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
 	font-weight: bold;
+	white-space: nowrap;
 }
 body, select, input, textarea {   
 	color: #46433A; 
@@ -53,7 +55,9 @@ a:hover { color: #036; }
 ul, ol { margin-left: 1.8em; }
 ol { list-style-type: decimal; }
 
-nav ul, nav li { margin: 0; } 
+nav ul, nav li, form ul { margin: 0; font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
+} 
+
 small { font-size: 85%; }
 strong, th { font-weight: bold; }
 td, td img { vertical-align: top; } 
@@ -101,16 +105,14 @@ input, textarea {
 }
 
 header {
-	padding: 5px 20px 15px 20px;
+	padding: 5px 20px 10px 20px;
 }
 
 footer {
 	padding: 15px 20px 5px 20px;
-	font-size: 90%;
 }
 
 header h1 {
-	font-size: 250%;
 	display: inline-block;
 	text-shadow: inset 0px 3px 2px #9d988a;
 }
@@ -121,61 +123,37 @@ header h2 {
 	padding-right: 20em;
 }
 
-header h3 {
+form ul li, nav ul li {
+	list-style: none;
+}
+
+
+nav ul li {
 	display: inline-block;
-	width: 6em;
-	background-color: #58b99c;
-	padding: 5px 8px 6px 6px;
+	padding: 5px 10px;
 	text-align: center;
-	border-top-right-radius: 1000px;	
-	-moz-border-top-right-radius: 1000px;	
-	-webkit-border-top-right-radius: 1000px;	
-	border-bottom-right-radius: 1000px;	
-	-moz-border-bottom-right-radius: 1000px;	
-	-webkit-border-bottom-right-radius: 1000px;	
 }
 
-header h3:hover {
-	background-color: #68c9ac;
-}
-
-header a {
+nav ul li a {
 	color: #46433A;
 	text-decoration: none;
+	font-weight: bold;
 }
-header a:hover {
+nav ul li a:hover {
 	color: #ce3f26;
 }
 
-.left_arrow_head {
-	width:0px; height:0;
-	line-height:0;
-	border-top:50px solid transparent;
-	border-right:100px solid #58b99c; /*#ce3f26;*/
-	border-bottom:50px solid transparent;
-	border-left:10px solid transparent;
-	display: inline-block;
-	vertical-align: middle;
-}
-
 .callout {
-	vertical-align: top;
-	display: inline-block;
-	position: absolute;
-	left: 800px;
-}
-
-.instructions {
-	display: inline-block;
-	background-color: #58b99c; /*#ce3f26;*/
+	display: none;
+	position: relative;
+	float:left;
+	background-color: #58b99c; 
 	vertical-align: middle;
-	font-size: 150%;
-	margin-left: -4px;
 	padding: 5px 8px 6px 6px;
+	margin-right: 1em;
 	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
 	font-weight: bold;
 	text-align: center;
-	width: 350px;
 	border-top-right-radius: 1000px;	
 	-moz-border-top-right-radius: 1000px;	
 	-webkit-border-top-right-radius: 1000px;	
@@ -185,22 +163,11 @@ header a:hover {
 }
 
 .note {
-	font-size: 90%;
+	font-size: 80%;
 }
 
 .instructions a {
 	color: #46433A;
-}
-
-.button_row {
-	display: inline-block;
-	text-align: right;
-	width: 750px;
-}
-
-form ul li {
-	list-style: none;
-	min-height: 100px;
 }
 
 textarea {
@@ -208,49 +175,18 @@ textarea {
 	border-style: ridge;
 	border-color: #58b99c;
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	min-width: 20em;
+	min-height: 30em;
+	width: 60%;
+	display: inline-block;
 }
 
 input[type="submit"] {
-	font-size: 150%;
-	font-weight: bold;
-	margin-top: 20px;
-	background-color: #58b99c;
-	border-color: #58b99c;
-}
-
-.example {
-	background-color: #ce3f26;
-	font-size: 300%;
 	font-family:"Gill Sans","Gill Sans MT","Helvetica Neue","Helvetica",Arial,sans-serif;
 	font-weight: bold;
-	-webkit-transform: rotate(-15deg); 
-	-moz-transform: rotate(-15deg);
-	display: inline-block;
-	position: absolute;
-	left: 900px;
-	top: 270px;
-	width: 5.5em;
-	height: 5.5em;
-	border-radius: 1000px;	
-	-moz-border-radius: 1000px;	
-	-webkit-border-radius: 1000px;
-	text-align: center;
-	-moz-box-shadow: 5px 5px 5px #46433A;
-	-webkit-box-shadow: 5px 5px 5px #46433A;
-	box-shadow: 5px 5px 5px #46433A;
-}
-
-.hi_example {
-	-moz-box-shadow: 10px 10px 10px #46433A;
-	-webkit-box-shadow: 10px 10px 10px #46433A;
-	box-shadow: 10px 10px 10px #46433A;
-	background-color: #de4f36;
-	left: 890px;
-	top: 260px;
-}
-
-.example p {
-	margin-top: 1.25em;
+	margin-top: 0.5em;
+	background-color: #58b99c;
+	border-color: #58b99c;
 }
 
 section {
@@ -258,7 +194,6 @@ section {
 }
 
 article {
-	font-size: 150%;
 	width: 30em;
 	margin-bottom: 3em;
 	margin-left: 5em;
